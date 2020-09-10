@@ -1,27 +1,22 @@
 <template>
   <v-app id="app">
     <v-main>
-      <v-app-bar>
-        <v-btn>
-          <router-link :to="{ name: 'event-list'}">List</router-link>
-        </v-btn>
-        <v-btn>
-          <router-link :to="{ name: 'event-show'}">Show Event #1</router-link>
-        </v-btn>
-        <v-btn>
-          <router-link :to="{ name: 'event-create'}">Create Event</router-link>
-        </v-btn>
-      </v-app-bar>
-      <router-view></router-view>
+      <Navbar />
+      <v-container class="d-flex justify-center">
+        <router-view class="main-view pa-2 d-flex flex-column mb-6 justify-center align-center"></router-view>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue';
 export default {
   name: 'App',
 
-  components: {},
+  components: {
+    Navbar
+  },
 
   data: () => ({
     //
@@ -30,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-#nav {
-  padding: 30px;
+.main-view {
+  width: 60%;
 }
 </style>
