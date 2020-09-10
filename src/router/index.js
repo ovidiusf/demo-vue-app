@@ -24,10 +24,15 @@ const routes = [
     name: 'event-create',
     component: () =>
       import(/* webpackChunkName: "event-create" */ '../views/EventCreate.vue')
+  },
+  {
+    path: '*',
+    component: () => import('../views/NotFoundComponent.vue')
   }
 ];
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 });
 
