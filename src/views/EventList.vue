@@ -2,6 +2,7 @@
   <v-container class="pa-2">
     <h1>Events Listing</h1>
     <EventCard />
+    <BaseIcon />
   </v-container>
 </template>
     

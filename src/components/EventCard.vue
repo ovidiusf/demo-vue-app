@@ -3,7 +3,9 @@
     <v-card class="pa-10">
       <span>@{{event.time}} on {{event.date}}</span>
       <h4>{{event.title}}</h4>
-      <span>{{event.attendees.length}} attending</span>
+      <v-container class="d-flex justify-center">
+        <BaseIcon name="users" class="pr-4">{{event.attendees.length}} attending</BaseIcon>
+      </v-container>
     </v-card>
   </router-link>
 </template>
