@@ -101,7 +101,7 @@
       ]
     },
     {
-      "id": 439337,
+      "id": 803463,
       "user": {
         "id": "abc123",
         "name": "Adam Jahr"
@@ -111,51 +111,15 @@
         "id": "abc123",
         "name": "Adam Jahr"
       },
-      "title": "welcome!",
-      "description": "hello",
-      "location": "Running !",
-      "date": "2020-09-08T16:02:00.000Z",
-      "time": "3:00",
+      "title": "Learning to swim",
+      "description": "All children to swim",
+      "location": "Bucharest, Pool",
+      "date": "9/16/2020",
+      "time": "6:00",
       "attendees": []
     },
     {
-      "id": 645636,
-      "user": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "category": "community",
-      "organizer": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "title": "Running event",
-      "description": "TEst event",
-      "location": "Romania",
-      "date": "2020-09-22T16:07:00.000Z",
-      "time": "5:00",
-      "attendees": []
-    },
-    {
-      "id": 955112,
-      "user": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "category": "food",
-      "organizer": {
-        "id": "abc123",
-        "name": "Adam Jahr"
-      },
-      "title": "Restaurant",
-      "description": "Eating",
-      "location": "Inland",
-      "date": "2020-09-24T16:12:00.000Z",
-      "time": "4:00",
-      "attendees": []
-    },
-    {
-      "id": 9946,
+      "id": 390863,
       "user": {
         "id": "abc123",
         "name": "Adam Jahr"
@@ -165,11 +129,11 @@
         "id": "abc123",
         "name": "Adam Jahr"
       },
-      "title": "Economy",
-      "description": "Testing",
-      "location": "Market",
-      "date": "2020-09-14T16:13:00.000Z",
-      "time": "4:00",
+      "title": "planting trees",
+      "description": "",
+      "location": "",
+      "date": "Sun Sep 13 2020",
+      "time": "",
       "attendees": []
     }
   ]

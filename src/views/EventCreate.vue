@@ -23,7 +23,12 @@
 
       <h3>When is your event?</h3>
       <div class="field">
-        <DatePicker v-model="event.date" placeholder="Select a date" format="dd MMM yyyy" />
+        <datepicker
+          v-model="event.date"
+          placeholder="Select a date"
+          name="uniquename"
+          :format="format"
+        ></datepicker>
       </div>
 
       <div class="field">
@@ -35,23 +40,27 @@
           required
         ></v-select>
       </div>
-
-      <input type="submit" value="Submit" />
+      <v-btn>
+        <input type="submit" value="Submit" />
+      </v-btn>
     </v-form>
   </v-card>
 </template>
 
 <script>
-import DatePicker from 'vuejs-datepicker';
+import Datepicker from 'vuejs-datepicker';
 import { mapGetters, mapState } from 'vuex';
 
 export default {
   components: {
-    DatePicker
+    Datepicker
   },
   computed: {
     // ...mapState(['user']),
-    // ...mapGetters(['getEventByID'])
+    ...mapGetters(['convertDate']),
+    getConvertedDate() {
+      return this.convertDate(this.event.id);
+    }
   },
   data() {
     const times = [];
@@ -60,6 +69,7 @@ export default {
       times.push(i + ':00');
     }
     return {
+      format: 'd MMM yyyy',
       times,
       event: this.createFreshEventObject(),
       categories: this.$store.state.categories
@@ -67,6 +77,8 @@ export default {
   },
   methods: {
     createEvent() {
+      const currentDate = new Date(this.event.date);
+      this.event.date = currentDate.toDateString();
       this.$store
         .dispatch('createEvent', this.event)
         .then(() => {
@@ -94,7 +106,7 @@ export default {
         title: '',
         description: '',
         location: '',
-        date: '',
+        date: new Date(),
         time: '',
         attendees: []
       };

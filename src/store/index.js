@@ -27,11 +27,8 @@ export default new Vuex.Store({
   },
   modules: {},
   getters: {
-    // categoriesLength: state => {
-    //   return state.categories.length;
-    // },
-    // getEventByID: state => id => {
-    //   return state.events.find(event => event.id === id);
-    // }
+    convertDate: state => id => {
+      return state.events.find(event => event.id === id);
+    }
   }
 });
