@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Beach Cleanup",
-      "date": "Aug 28 2020",
+      "date": "Aug 28 2018",
       "time": "10:00",
       "location": "Daytona Beach",
       "description": "Let's clean up this beach.",
@@ -31,7 +31,7 @@
     {
       "id": 2,
       "title": "Park Cleanup",
-      "date": "Sep 11 2020",
+      "date": "Nov 12 2018",
       "time": "12:00",
       "location": "132 N Magnolia Street, Orlando, Florida",
       "description": "We're going to clean up this park.",
@@ -51,7 +51,7 @@
     {
       "id": 3,
       "title": "Pet Adoption Day",
-      "date": "Dec 2 2020",
+      "date": "Dec 2 2018",
       "time": "12:00",
       "location": "132 N Magnolia Street, Orlando, Florida",
       "description": "Help animals find new homes.",
@@ -71,6 +71,106 @@
           "name": "Mary Gordon"
         }
       ]
+    },
+    {
+      "id": 4,
+      "title": "Disco Party",
+      "date": "Aug 28 2018",
+      "time": "10:00",
+      "location": "Daytona Beach",
+      "description": "Let's clean up this beach.",
+      "organizer": "Adam Jahr",
+      "category": "sustainability",
+      "attendees": [
+        {
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "def456",
+          "name": "Gregg Pollack"
+        },
+        {
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
+      ]
+    },
+    {
+      "id": 439337,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "welcome!",
+      "description": "hello",
+      "location": "Running !",
+      "date": "2020-09-08T16:02:00.000Z",
+      "time": "3:00",
+      "attendees": []
+    },
+    {
+      "id": 645636,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Running event",
+      "description": "TEst event",
+      "location": "Romania",
+      "date": "2020-09-22T16:07:00.000Z",
+      "time": "5:00",
+      "attendees": []
+    },
+    {
+      "id": 955112,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Restaurant",
+      "description": "Eating",
+      "location": "Inland",
+      "date": "2020-09-24T16:12:00.000Z",
+      "time": "4:00",
+      "attendees": []
+    },
+    {
+      "id": 9946,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Economy",
+      "description": "Testing",
+      "location": "Market",
+      "date": "2020-09-14T16:13:00.000Z",
+      "time": "4:00",
+      "attendees": []
     }
   ]
 }
