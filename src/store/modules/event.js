@@ -29,17 +29,22 @@ export const actions = {
       commit('ADD_EVENT', event);
     });
   },
-  fetchEvents({ commit }, { perPage, page }) {
+  fetchEvents({ commit, dispatch }, { perPage, page }) {
     EventService.getEvents(perPage, page)
       .then(response => {
         commit('SET_EVENTS_TOTAL', response.headers['x-total-count']);
         commit('SET_EVENTS', response.data);
       })
       .catch(error => {
-        console.info(error, 'This is an error');
+        const notification = {
+          type: 'error',
+          message: 'There was a problem fetching events: ' + error.message
+        };
+
+        dispatch('notification/add', notification, { root: true });
       });
   },
-  fetchEvent({ commit, getters }, id) {
+  fetchEvent({ commit, getters, dispatch }, id) {
     const event = getters.getEventById(id);
     if (event) {
       commit('SET_EVENT', event);
@@ -49,7 +54,12 @@ export const actions = {
           commit('SET_EVENT', response.data);
         })
         .catch(error => {
-          console.info(error);
+          const notification = {
+            type: 'error',
+            message: 'There was a problem fetching events: ' + error.message
+          };
+
+          dispatch('notification/add', notification, { root: true });
         });
     }
   }
