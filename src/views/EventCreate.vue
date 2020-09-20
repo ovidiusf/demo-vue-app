@@ -55,13 +55,7 @@ export default {
   components: {
     Datepicker
   },
-  computed: {
-    // ...mapState(['user']),
-    ...mapGetters(['convertDate']),
-    getConvertedDate() {
-      return this.convertDate(this.event.id);
-    }
-  },
+  computed: {},
   data() {
     const times = [];
 
