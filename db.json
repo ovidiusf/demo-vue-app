@@ -189,6 +189,24 @@
       "date": "Sun Sep 20 2020",
       "time": "6:00",
       "attendees": []
+    },
+    {
+      "id": 445782,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "community",
+      "description": "description",
+      "location": "Far away",
+      "date": "Fri Sep 25 2020",
+      "time": "2:00",
+      "attendees": []
     }
   ]
 }

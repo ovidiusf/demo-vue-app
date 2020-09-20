@@ -1,7 +1,7 @@
 <template>
   <v-container class="pa-2">
-    <h1>Events Listing</h1>
-    <EventCard class="pa-3" v-for="event in events" :key="event.id" :event="event" />
+    <h1>Events for {{user.user.name}}</h1>
+    <EventCard class="pa-3" v-for="event in event.events" :key="event.id" :event="event" />
     <v-container class="d-flex justify-center">
       <template v-if="page !=1">
         <router-link
@@ -12,7 +12,7 @@
       </template>
       <template v-if="showNextPage">
         <router-link
-          :to="{name: 'event-list', query: {page: page+1}}"
+          :to="{name: 'event-list', query: {page: page + 1}}"
           rel="next"
           class="pa-2"
         >Next Page</router-link>
@@ -30,20 +30,21 @@ export default {
     EventCard
   },
   created() {
-    this.$store.dispatch('fetchEvents', {
+    this.$store.dispatch('event/fetchEvents', {
       perPage: 3,
       page: this.page
     });
   },
   computed: {
-    ...mapState(['events', 'eventsTotal']),
+    ...mapState(['event', 'user']),
     page() {
       return parseInt(this.$route.query.page) || 1;
     },
     showNextPage() {
-      return this.eventsTotal > this.page * 3;
+      return this.event.eventsTotal > this.page * 3;
     }
-  }
+  },
+  mounted() {}
 };
 </script>
 
