@@ -135,6 +135,24 @@
       "date": "Sun Sep 13 2020",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 392263,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "planting trees",
+      "description": "",
+      "location": "",
+      "date": "Sun Sep 20 2020",
+      "time": "",
+      "attendees": []
     }
   ]
 }
