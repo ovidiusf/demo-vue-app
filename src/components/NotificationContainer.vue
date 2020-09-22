@@ -1,11 +1,11 @@
 <template>
-  <v-overlay class="d-flex flex-column notification-container">
+  <v-container class="d-flex flex-column notification-container">
     <NotificationBar
       v-for="notification in notifications"
       :key="notification.id"
       :notification="notification"
     />
-  </v-overlay>
+  </v-container>
 </template>
 
 <script>
