@@ -2,6 +2,7 @@
   <v-app id="app">
     <v-main>
       <Navbar />
+      <NotificationContainer />
       <v-container class="d-flex justify-center">
         <router-view
           :key="$route.fullPath"
@@ -14,10 +15,12 @@
 
 <script>
 import Navbar from './components/Navbar.vue';
+import NotificationContainer from './components/NotificationContainer';
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    NotificationContainer
   },
   data: () => ({})
 };
