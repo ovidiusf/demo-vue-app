@@ -1,7 +1,9 @@
 <template>
   <v-container class="pa-2">
     <h1>Events for {{user.user.name}}</h1>
+
     <EventCard class="pa-3" v-for="event in event.events" :key="event.id" :event="event" />
+
     <v-container class="d-flex justify-center">
       <template v-if="page !=1">
         <router-link

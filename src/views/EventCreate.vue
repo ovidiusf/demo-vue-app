@@ -1,7 +1,7 @@
 <template>
   <v-card class="pa-5">
     <h1>Create an Event</h1>
-    <v-form @submit.prevent="createEvent">
+    <v-form class="event-create-width" @submit.prevent="createEvent">
       <v-select
         v-model="event.category"
         :items="categories"
@@ -113,5 +113,8 @@ export default {
 }
 label {
   padding: 5px;
+}
+.event-create-width {
+  width: 25vw;
 }
 </style>

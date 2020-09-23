@@ -1,10 +1,12 @@
 <template>
   <v-container class="d-flex flex-column notification-container">
-    <NotificationBar
-      v-for="notification in notifications"
-      :key="notification.id"
-      :notification="notification"
-    />
+    <v-list>
+      <NotificationBar
+        v-for="notification in notifications"
+        :key="notification.id"
+        :notification="notification"
+      />
+    </v-list>
   </v-container>
 </template>
 

@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <div class="event-header">
-      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
-      <h1 class="title">{{ event.title }}</h1>
-      <h5>Organized by {{ event.organizer ? event.organizer.name : '' }}</h5>
-      <h5>Category: {{ event.category }}</h5>
-    </div>
+  <v-card class="d-flex pa-2 flex-column align-center event-show-width">
+    <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
+    <h1 class="title">{{ event.title }}</h1>
+    <h5>Organized by {{ event.organizer ? event.organizer.name : '' }}</h5>
+    <h5>Category: {{ event.category }}</h5>
 
     <BaseIcon name="map">
       <h2>Location</h2>
@@ -25,7 +23,7 @@
         <b>{{ attendee.name }}</b>
       </li>
     </ul>
-  </div>
+  </v-card>
 </template>
 <script>
 import { mapState, mapActions } from 'vuex';
@@ -59,5 +57,8 @@ export default {
 .list-group > .list-item {
   padding: 1em 0;
   border-bottom: solid 1px #e5e5e5;
+}
+.event-show-width {
+  width: 30vw;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex pa-4" :class="notificationTypeClass">
+  <v-container class="d-flex pa-4 justify-center align-center" :class="notificationTypeClass">
     <p>{{notification.message}}</p>
   </v-container>
 </template>

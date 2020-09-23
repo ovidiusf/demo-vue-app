@@ -117,6 +117,78 @@
       "date": "Tue Oct 20 2020",
       "time": "3:00",
       "attendees": []
+    },
+    {
+      "id": 686075,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "Wed Sep 23 2020",
+      "time": "5:00",
+      "attendees": []
+    },
+    {
+      "id": 968993,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "Wed Sep 23 2020",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 389654,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "Wed Sep 23 2020",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 653296,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "Wed Sep 23 2020",
+      "time": "",
+      "attendees": []
     }
   ]
 }

@@ -2,13 +2,13 @@
   <v-app id="app">
     <v-main>
       <Navbar />
-      <NotificationContainer />
       <v-container class="d-flex justify-center">
         <router-view
           :key="$route.fullPath"
           class="main-view pa-2 d-flex flex-column mb-6 justify-center align-center"
         ></router-view>
       </v-container>
+      <NotificationContainer />
     </v-main>
   </v-app>
 </template>
