@@ -207,6 +207,42 @@
       "date": "Sun Sep 27 2020",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 833070,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "dwfewfewr",
+      "description": "gregregre",
+      "location": "",
+      "date": "Sun Sep 27 2020",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 467868,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "Sun Sep 27 2020",
+      "time": "",
+      "attendees": []
     }
   ]
 }

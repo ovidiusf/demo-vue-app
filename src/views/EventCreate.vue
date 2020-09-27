@@ -12,13 +12,25 @@
 
       <h3>Name & describe your event</h3>
       <div class="field">
-        <v-text-field v-model="event.title" label="Add an event title" required></v-text-field>
-        <v-text-field v-model="event.description" label="Add a description" required></v-text-field>
+        <v-text-field
+          v-model="event.title"
+          label="Add an event title"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="event.description"
+          label="Add a description"
+          required
+        ></v-text-field>
       </div>
 
       <h3>Where is your event?</h3>
       <div class="field">
-        <v-text-field v-model="event.location" label="Add a location" required></v-text-field>
+        <v-text-field
+          v-model="event.location"
+          label="Add a location"
+          required
+        ></v-text-field>
       </div>
 
       <h3>When is your event?</h3>
@@ -49,6 +61,7 @@
 
 <script>
 import Datepicker from 'vuejs-datepicker';
+import NProgress from 'nprogress';
 import { mapGetters, mapState } from 'vuex';
 
 export default {
@@ -73,6 +86,7 @@ export default {
     createEvent() {
       const currentDate = new Date(this.event.date);
       this.event.date = currentDate.toDateString();
+      NProgress.start();
       this.$store
         .dispatch('event/createEvent', this.event)
         .then(() => {
@@ -84,7 +98,9 @@ export default {
           });
           this.event = this.createFreshEventObject();
         })
-        .catch(() => {});
+        .catch(() => {
+          NProgress.done();
+        });
     },
     createFreshEventObject() {
       const user = this.$store.state.user.user;
