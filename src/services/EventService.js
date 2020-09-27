@@ -1,17 +1,16 @@
 import axios from 'axios';
 import NProgress from 'nprogress';
 
-let IP = 'http://192.168.6.130';
+let baseIp;
 
 if (process.env.NODE_ENV !== 'production') {
-  IP = 'http://192.168.6.130:3000';
+  baseIp = 'http://192.168.6.130:3000';
 } else {
-  IP = 'https://json-server-dummy.herokuapp.com';
+  baseIp = 'https://json-server-dummy.herokuapp.com';
 }
 
 const apiClient = axios.create({
-  baseURL: IP,
-  // baseURL: 'https://json-server-dummy.herokuapp.com',
+  baseURL: baseIp,
   withCredentials: false,
 
   headers: {
