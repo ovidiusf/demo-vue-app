@@ -4,6 +4,7 @@ import EventList from '../views/EventList.vue';
 import Home from '../components/Home.vue';
 import NProgress from 'nprogress';
 import store from '../store/index';
+import _default from 'vuex';
 
 Vue.use(VueRouter);
 
@@ -28,10 +29,20 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import('../views/EventShow.vue'),
     beforeEnter(routeTo, routeFrom, next) {
-      store.dispatch('event/fetchEvent', routeTo.params.id).then(event => {
-        routeTo.params.event = event;
-        next();
-      });
+      store
+        .dispatch('event/fetchEvent', routeTo.params.id)
+        .then(event => {
+          routeTo.params.event = event;
+          next();
+        })
+        // on error redirect to 404 with name of the missing resource
+        .catch(error => {
+          if (error.response && error.response.status == 404) {
+            next({ name: '404', params: { resource: 'event' } });
+          } else {
+            next({ name: 'network-issue' });
+          }
+        });
     }
   },
   {
@@ -41,8 +52,28 @@ const routes = [
       import(/* webpackChunkName: "event-create" */ '../views/EventCreate.vue')
   },
   {
+    path: '404',
+    name: '404',
+    props: true,
+    component: () =>
+      import(/* webpackChunkName: "404" */ '../views/NotFound.vue')
+  },
+  {
+    path: '/network-issue',
+    name: 'network-issue',
+    component: () =>
+      import(
+        /* webpackChunkName: "network-issue" */ '../views/NetworkIssue.vue'
+      )
+  },
+  {
     path: '*',
-    component: () => import('../views/NotFoundComponent.vue')
+    redirect: {
+      name: '404',
+      params: {
+        resource: 'page'
+      }
+    }
   }
 ];
 

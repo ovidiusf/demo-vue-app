@@ -4,7 +4,7 @@ import NProgress from 'nprogress';
 let baseIp;
 
 if (process.env.NODE_ENV !== 'production') {
-  baseIp = 'http://192.168.6.130:3000';
+  baseIp = 'http://192.168.1.176:3000';
 } else {
   baseIp = 'https://json-server-dummy.herokuapp.com';
 }
@@ -16,7 +16,9 @@ const apiClient = axios.create({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'
-  }
+  },
+
+  timeout: 10000
 });
 
 apiClient.interceptors.request.use(config => {
