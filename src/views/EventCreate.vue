@@ -42,9 +42,9 @@
           hint="Pick your desired time"
         />
       </v-container>
-      <v-btn>
-        <input type="submit" value="Submit" />
-      </v-btn>
+      <v-container class="d-flex justify-center">
+        <BaseButton type="submit">Submit</BaseButton>
+      </v-container>
     </v-form>
   </v-card>
 </template>
