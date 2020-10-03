@@ -14,6 +14,12 @@ export default new Vuex.Store({
     notification
   },
   state: {
-    categories: ['sustainability', 'education', 'food', 'community']
+    categories: [
+      'sustainability',
+      'education',
+      'food',
+      'community',
+      'financial'
+    ]
   }
 });

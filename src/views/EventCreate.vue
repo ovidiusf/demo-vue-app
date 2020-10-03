@@ -2,14 +2,12 @@
   <v-card class="pa-5">
     <h1>Create an Event</h1>
     <v-form class="event-create-width" @submit.prevent="createEvent">
-      <v-select
-        v-model="event.category"
-        :items="categories"
-        :rules="[v => !!v || 'Item is required']"
+      <BaseSelect
         label="Select a category"
-        required
-      ></v-select>
-
+        :options="categories"
+        v-model="event.category"
+        hint="Pick your event category"
+      />
       <h3>Name & describe your event</h3>
 
       <v-container class="field">
@@ -37,13 +35,12 @@
       </v-container>
 
       <v-container class="field">
-        <v-select
-          v-model="event.time"
-          :items="times"
-          :rules="[v => !!v || 'Item is required']"
+        <BaseSelect
           label="Select a time"
-          required
-        ></v-select>
+          :options="times"
+          v-model="event.time"
+          hint="Pick your desired time"
+        />
       </v-container>
       <v-btn>
         <input type="submit" value="Submit" />
