@@ -11,39 +11,32 @@
       ></v-select>
 
       <h3>Name & describe your event</h3>
-      <div class="field">
-        <v-text-field
-          v-model="event.title"
+
+      <v-container class="field">
+        <BaseInput
           label="Add an event title"
-          required
-        ></v-text-field>
-        <v-text-field
-          v-model="event.description"
-          label="Add a description"
-          required
-        ></v-text-field>
-      </div>
+          v-model="event.title"
+          placeholder="Running with ghosts"
+        />
+        <BaseInput label="Add a description" v-model="event.description" />
+      </v-container>
 
       <h3>Where is your event?</h3>
-      <div class="field">
-        <v-text-field
-          v-model="event.location"
-          label="Add a location"
-          required
-        ></v-text-field>
-      </div>
+      <v-container class="field">
+        <BaseInput label="Add a location" v-model="event.location" />
+      </v-container>
 
       <h3>When is your event?</h3>
-      <div class="field">
+      <v-container class="field">
         <datepicker
           v-model="event.date"
           placeholder="Select a date"
           name="uniquename"
           :format="format"
         ></datepicker>
-      </div>
+      </v-container>
 
-      <div class="field">
+      <v-container class="field">
         <v-select
           v-model="event.time"
           :items="times"
@@ -51,7 +44,7 @@
           label="Select a time"
           required
         ></v-select>
-      </div>
+      </v-container>
       <v-btn>
         <input type="submit" value="Submit" />
       </v-btn>
