@@ -8,6 +8,7 @@ This application serves as a demonstration of the following technologies:
 - Vue Router
 - Axios
 - NProgress Library
+- Vuelidate
 
 It has the following capabilities:
 

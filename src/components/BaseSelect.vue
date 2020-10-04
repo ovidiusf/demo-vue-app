@@ -1,8 +1,10 @@
 <template>
   <v-select
     v-model="inputValue"
+    v-bind="$attrs"
+    v-on="$listeners"
     :items="options"
-    :rules="[v => !!v || 'Item is required']"
+    :rules="[v => !!v || `${field} is required`]"
     :label="label"
     :hint="hint"
     required
@@ -26,14 +28,14 @@ export default {
       type: String,
       default: ''
     },
+    field: {
+      type: String,
+      default: 'Item'
+    },
     hint: {
       type: String,
       default: ''
     }
-  },
-  methods: {},
-  updated() {
-    this.$emit('input', this.inputValue);
   }
 };
 </script>

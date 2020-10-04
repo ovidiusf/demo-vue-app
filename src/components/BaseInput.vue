@@ -4,6 +4,7 @@
     v-model="inputValue"
     :label="label"
     v-bind="$attrs"
+    v-on="$listeners"
     required
   ></v-text-field>
 </template>
@@ -21,10 +22,6 @@ export default {
       type: String,
       default: ''
     }
-  },
-  methods: {},
-  updated() {
-    this.$emit('input', this.inputValue);
   }
 };
 </script>

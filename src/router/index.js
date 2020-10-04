@@ -52,7 +52,7 @@ const routes = [
       import(/* webpackChunkName: "event-create" */ '../views/EventCreate.vue')
   },
   {
-    path: '404',
+    path: '/404',
     name: '404',
     props: true,
     component: () =>
