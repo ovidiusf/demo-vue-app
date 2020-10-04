@@ -12,8 +12,9 @@
 </template>
 
 <script>
+import { formFieldMixin } from '../mixins/formFieldMixin';
 export default {
-  inheritAttrs: false,
+  mixins: [formFieldMixin],
   data() {
     return {
       inputValue: ''
@@ -23,10 +24,6 @@ export default {
     options: {
       type: Array,
       required: true
-    },
-    label: {
-      type: String,
-      default: ''
     },
     field: {
       type: String,
@@ -39,6 +36,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

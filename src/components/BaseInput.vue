@@ -10,21 +10,13 @@
 </template>
 
 <script>
+import { formFieldMixin } from '../mixins/formFieldMixin';
 export default {
-  inheritAttrs: false,
+  mixins: [formFieldMixin],
   data() {
     return {
       inputValue: ''
     };
-  },
-  props: {
-    label: {
-      type: String,
-      default: ''
-    }
   }
 };
 </script>
-
-<style>
-</style>

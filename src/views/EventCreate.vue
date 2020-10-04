@@ -133,8 +133,8 @@ export default {
     createEvent() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
-        const currentDate = new Date(this.event.date);
-        this.event.date = currentDate.toDateString();
+        // const currentDate = new Date(this.event.date);
+        // this.event.date = currentDate.toDateString();
 
         if (this.attendees.length > 0) {
           this.attendees = this.attendees.split(',');

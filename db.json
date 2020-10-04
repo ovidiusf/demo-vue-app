@@ -304,6 +304,42 @@
       "date": "Tue Oct 27 2020",
       "time": "6:00",
       "attendees": []
+    },
+    {
+      "id": 627338,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "financial",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "puppies",
+      "description": "promenade",
+      "location": "Bucharest",
+      "date": "Sun Oct 04 2020",
+      "time": "6:00",
+      "attendees": []
+    },
+    {
+      "id": 360265,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "food",
+      "description": "food",
+      "location": "food",
+      "date": "2020-10-04T14:46:27.396Z",
+      "time": "17:00",
+      "attendees": []
     }
   ]
 }
