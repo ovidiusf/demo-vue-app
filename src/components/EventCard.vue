@@ -31,6 +31,23 @@ h4 {
   text-decoration: none;
 }
 .event-card-width {
-  width: 30vw;
+  width: 50vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .event-card-width {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .event-card-width {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .event-card-width {
+    width: 95vw;
+  }
 }
 </style>

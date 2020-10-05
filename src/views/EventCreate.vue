@@ -189,7 +189,24 @@ label {
   padding: 5px;
 }
 .event-create-width {
-  width: 25vw;
+  width: 45vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .event-create-width {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .event-create-width {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .event-create-width {
+    width: 95vw;
+  }
 }
 
 .errorMessage {

@@ -1,5 +1,5 @@
 <template>
-  <v-card class="d-flex pa-2 flex-column align-center event-show-width">
+  <v-card class="d-flex pa-5 flex-column align-center event-show-width">
     <span class="eyebrow">@{{ event.time }} on {{ event.date | date }}</span>
     <h1 class="title">{{ event.title }}</h1>
     <h5>Organized by {{ event.organizer ? event.organizer.name : '' }}</h5>
@@ -62,6 +62,17 @@ export default {
   border-bottom: solid 1px #e5e5e5;
 }
 .event-show-width {
-  width: 30vw;
+  width: 50vw;
+}
+@media only screen and (max-width: 1200px) {
+  .event-show-width {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .event-show-width {
+    width: 95vw;
+  }
 }
 </style>
