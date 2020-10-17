@@ -28,6 +28,6 @@ export default {
 
 <style scoped>
 .main-view {
-  width: 60%;
+  width: 100%;
 }
 </style>
